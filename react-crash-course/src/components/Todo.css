@@ -1,0 +1,9 @@
+h2 {
+    word-wrap: normal;
+}
+
+.todo {
+    width: calc(100 / 3);
+    border: 1px solid black;
+    padding: 16px;
+}
