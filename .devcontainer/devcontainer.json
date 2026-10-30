@@ -1,0 +1,19 @@
+{
+  "name": "fes-m06-ch02",
+  "workspaceFolder": "/workspaces/fes-m06-ch02/react-crash-course",
+  "postCreateCommand": "npm install",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite app",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
