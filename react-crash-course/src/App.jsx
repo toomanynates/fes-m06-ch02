@@ -1,45 +1,25 @@
-import { useState, useEffect } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import Todo from './components/Todo.jsx'
-import Title from './components/Title.jsx'
-import Modal from './components/Modal.jsx'
+import "./App.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Nav from './components/Nav'
+import Users from './pages/Users';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    console.log("useEffect")  //  called upon mount
-  } ) 
-
-  return (
-    <>
-      <section >
+    return (
         <div>
-          <Title />
-          <input type="text" onChange={(event) => {
-            console.log(event.target.value);
-          }} />
-          <button>Add TODO</button>
-          <div className='todo__wrapper'>
-            <Todo title="Finish Frontend Simplified"
-                  para="Code along step by step"></Todo>
-
-            <Todo title="Finish interview section"
-                  para="Finish every interview question"/>
-
-            <Todo title="Land $100k job"
-                  para="Buy lunch"/>
-            <Todo title="Praise God"
-                  para="Use hymns and spiritual songs"/>
-          </div>
-          <Modal title="Are you super super sure?"/>
+            <Router>
+                <Nav />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/users/:username" element={<Users />} />
+                </Routes>
+            </Router>
         </div>
-        </section>
-    </>
-  );
+    )
 }
 
-export default App
+export default App;
