@@ -35,7 +35,7 @@ function App() {
             <Todo title="Praise God"
                   para="Use hymns and spiritual songs"/>
           </div>
-          <Modal title="Are you super super sure?"/>
+          {/* <Modal title="Are you super super sure?"/> */}
         </div>
         </section>
     </>

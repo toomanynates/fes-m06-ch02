@@ -1,6 +1,10 @@
 import './Todo.css'
 
-function Todo({title, para}) {
+/* option 1 props */
+// function Todo({title, para}) {
+
+/* option 2 props */
+function Todo(props) {
 /*
 props:
 title string
@@ -12,8 +16,12 @@ para string
 
     return (
         <div className='todo'>
+            {/* option 1 props
             <h2>{title}</h2>
             <p>{para}</p>
+            */}
+            <h2>{props.title}</h2>
+            <p>{props.para}</p>
             <button onClick={() => {btnClick()}}>Delete</button>
         </div>
     )
